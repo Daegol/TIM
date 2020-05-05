@@ -1,0 +1,15 @@
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Core.dll
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.csprojAssemblyReference.cache
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.AssemblyInfo.cs
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Infrastructure.deps.json
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Infrastructure.dll
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Infrastructure.pdb
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Core.pdb
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.csproj.CopyComplete
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.dll
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.pdb
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Infrastructure.runtimeconfig.json
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\bin\Debug\netcoreapp3.1\TIM_Server.Infrastructure.runtimeconfig.dev.json
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.genruntimeconfig.cache
+C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Infrastructure\obj\Debug\netcoreapp3.1\TIM_Server.Infrastructure.csproj.CoreCompileInputs.cache
