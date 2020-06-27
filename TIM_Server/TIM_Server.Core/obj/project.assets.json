@@ -4256,11 +4256,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pwale\\source\\repos\\TIM_Server\\TIM_Server.Core\\TIM_Server.Core.csproj",
+      "projectUniqueName": "C:\\Users\\pwale\\Desktop\\TIM\\TIM\\TIM_Server\\TIM_Server.Core\\TIM_Server.Core.csproj",
       "projectName": "TIM_Server.Core",
-      "projectPath": "C:\\Users\\pwale\\source\\repos\\TIM_Server\\TIM_Server.Core\\TIM_Server.Core.csproj",
+      "projectPath": "C:\\Users\\pwale\\Desktop\\TIM\\TIM\\TIM_Server\\TIM_Server.Core\\TIM_Server.Core.csproj",
       "packagesPath": "C:\\Users\\pwale\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pwale\\source\\repos\\TIM_Server\\TIM_Server.Core\\obj\\",
+      "outputPath": "C:\\Users\\pwale\\Desktop\\TIM\\TIM\\TIM_Server\\TIM_Server.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

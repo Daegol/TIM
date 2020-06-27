@@ -8,6 +8,8 @@ namespace TIM_Server.Core.IRepositories
     public interface ISoldierRepository
     {
         Task<IEnumerable<Soldier>> Get();
+        Task<IEnumerable<Soldier>> GetNotOutgoing(Guid companyId);
+        Task<IEnumerable<Soldier>> GetAllFromCompany(Guid companyId);
         Task<Soldier> GetById(Guid id);
         Task<Soldier> GetByEmail(string email);
         Task<Soldier> GetByPesel(string pesel);

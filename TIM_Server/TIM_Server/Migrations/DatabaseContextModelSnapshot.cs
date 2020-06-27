@@ -143,6 +143,37 @@ namespace TIM_Server.Application.Migrations
                     b.ToTable("Companies");
                 });
 
+            modelBuilder.Entity("TIM_Server.Core.Model.Leave", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Returned")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid?>("SoldierId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Where")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SoldierId");
+
+                    b.ToTable("Leaves");
+                });
+
             modelBuilder.Entity("TIM_Server.Core.Model.Report", b =>
                 {
                     b.Property<Guid>("Id")
@@ -155,8 +186,8 @@ namespace TIM_Server.Application.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("SoldierId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");
@@ -263,6 +294,9 @@ namespace TIM_Server.Application.Migrations
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Street")
                         .HasColumnType("nvarchar(max)");
 
@@ -278,6 +312,13 @@ namespace TIM_Server.Application.Migrations
                     b.HasOne("TIM_Server.Core.Model.Company", "Company")
                         .WithOne("Commander")
                         .HasForeignKey("TIM_Server.Core.Model.Commander", "CompanyId");
+                });
+
+            modelBuilder.Entity("TIM_Server.Core.Model.Leave", b =>
+                {
+                    b.HasOne("TIM_Server.Core.Model.Soldier", "Soldier")
+                        .WithMany("Leaves")
+                        .HasForeignKey("SoldierId");
                 });
 
             modelBuilder.Entity("TIM_Server.Core.Model.Report", b =>

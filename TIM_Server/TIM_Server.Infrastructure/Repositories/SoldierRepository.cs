@@ -20,6 +20,12 @@ namespace TIM_Server.Infrastructure.Repositories
         public async Task<IEnumerable<Soldier>> Get() =>
             await Task.FromResult(_context.Soldiers.ToList());
 
+        public async Task<IEnumerable<Soldier>> GetNotOutgoing(Guid companyId) =>
+            await Task.FromResult(_context.Soldiers.Where(x => x.Status=="X" && x.CompanyId==companyId).ToList());
+
+        public async Task<IEnumerable<Soldier>> GetAllFromCompany(Guid companyId) =>
+            await Task.FromResult(_context.Soldiers.Where(x => x.CompanyId == companyId).ToList());
+
         public async Task<Soldier> GetById(Guid id) =>
             await Task.FromResult(_context.Soldiers.SingleOrDefault(x => x.Id == id));
 

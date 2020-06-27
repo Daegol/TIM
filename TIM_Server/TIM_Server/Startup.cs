@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using TIM_Server.Core.IRepositories;
 using TIM_Server.Infrastructure.Authorization;
 using TIM_Server.Infrastructure.Database;
@@ -63,17 +64,31 @@ namespace TIM_Server
             services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<ISoldierRepository, SoldierRepository>();
             services.AddScoped<ICommanderRepository, CommanderRepository>();
+            services.AddScoped<IReportRepository, ReportRepository>();
+            services.AddScoped<ILeaveRepository, LeaveRepository>();
 
             #endregion
 
             #region Services
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IOutgoingBookService, OutgoingBookService>();
+            services.AddScoped<IReportService, ReportService>();
+            services.AddScoped<ISoldierService, SoldierService>();
             services.AddScoped<IJwtHandler, JwtHandler>();
 
             #endregion
 
             services.AddControllers();
+
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "My API",
+                    Version = "v1"
+                });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -94,11 +109,19 @@ namespace TIM_Server
             app.UseAuthentication();
             app.UseAuthorization();
 
+            DatabaseInitializer.PrepPopulation(app).Wait();
+
             //app.UseErrorHandler();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace TIM_Server.Services.DTOs
+﻿namespace TIM_Server.Services.DTOs.Users
 {
     public class UserForLoginDto
     {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TIM_Server.Application.Controllers
 {
     [Route("[controller]")]
-    [Authorize]
+    [AllowAnonymous]
     public abstract class ApiBaseController : Controller
     {
         protected Guid UserId => User?.Identity?.IsAuthenticated == true ?

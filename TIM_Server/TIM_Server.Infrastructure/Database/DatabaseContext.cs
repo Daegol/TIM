@@ -32,6 +32,7 @@ namespace TIM_Server.Infrastructure.Database
         public DbSet<Request> Requests { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Commander> Commanders { get; set; }
+        public DbSet<Leave> Leaves { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -42,6 +43,7 @@ namespace TIM_Server.Infrastructure.Database
             modelBuilder.ApplyConfiguration(new RequestConfiguration());
             modelBuilder.ApplyConfiguration(new ServiceConfiguration());
             modelBuilder.ApplyConfiguration(new SoldierConfiguration());
+            modelBuilder.ApplyConfiguration(new LeaveConfiguration());
         }
     }
 }

@@ -10,3 +10,15 @@ C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\T
 C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\TIM_Server.Core.runtimeconfig.dev.json
 C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.genruntimeconfig.cache
 C:\Users\pwale\source\repos\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.csproj.CoreCompileInputs.cache
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\TIM_Server.Core.deps.json
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\TIM_Server.Core.runtimeconfig.json
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\TIM_Server.Core.runtimeconfig.dev.json
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\TIM_Server.Core.dll
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\bin\Debug\netcoreapp3.1\TIM_Server.Core.pdb
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.csprojAssemblyReference.cache
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.csproj.CoreCompileInputs.cache
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.AssemblyInfoInputs.cache
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.AssemblyInfo.cs
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.dll
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.pdb
+C:\Users\pwale\Desktop\TIM\TIM\TIM_Server\TIM_Server.Core\obj\Debug\netcoreapp3.1\TIM_Server.Core.genruntimeconfig.cache

@@ -136,6 +136,7 @@ namespace TIM_Server.Application.Migrations
                     City = table.Column<string>(nullable: true),
                     Street = table.Column<string>(nullable: true),
                     HouseNumber = table.Column<string>(nullable: true),
+                    Status = table.Column<string>(nullable: true),
                     CompanyId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -145,6 +146,29 @@ namespace TIM_Server.Application.Migrations
                         name: "FK_Soldiers_Companies_CompanyId",
                         column: x => x.CompanyId,
                         principalTable: "Companies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Leaves",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    StartDate = table.Column<DateTime>(nullable: false),
+                    EndDate = table.Column<DateTime>(nullable: false),
+                    Where = table.Column<string>(nullable: true),
+                    Type = table.Column<string>(nullable: true),
+                    Returned = table.Column<bool>(nullable: false),
+                    SoldierId = table.Column<Guid>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Leaves", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Leaves_Soldiers_SoldierId",
+                        column: x => x.SoldierId,
+                        principalTable: "Soldiers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -177,6 +201,11 @@ namespace TIM_Server.Application.Migrations
                 filter: "[CompanyId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Leaves_SoldierId",
+                table: "Leaves",
+                column: "SoldierId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Reports_CompanyId",
                 table: "Reports",
                 column: "CompanyId");
@@ -204,6 +233,9 @@ namespace TIM_Server.Application.Migrations
 
             migrationBuilder.DropTable(
                 name: "Commanders");
+
+            migrationBuilder.DropTable(
+                name: "Leaves");
 
             migrationBuilder.DropTable(
                 name: "Reports");

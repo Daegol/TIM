@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using TIM_Server.Infrastructure.Authorization;
 using TIM_Server.Services.DTOs;
+using TIM_Server.Services.DTOs.Users;
 using TIM_Server.Services.IServices;
 
 namespace TIM_Server.Application.Controllers
