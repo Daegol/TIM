@@ -66,6 +66,7 @@ namespace TIM_Server
             services.AddScoped<ICommanderRepository, CommanderRepository>();
             services.AddScoped<IReportRepository, ReportRepository>();
             services.AddScoped<ILeaveRepository, LeaveRepository>();
+            services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 
             #endregion
 
@@ -75,6 +76,7 @@ namespace TIM_Server
             services.AddScoped<IOutgoingBookService, OutgoingBookService>();
             services.AddScoped<IReportService, ReportService>();
             services.AddScoped<ISoldierService, SoldierService>();
+            services.AddScoped<IEquipmentService, EquipmentService>();
             services.AddScoped<IJwtHandler, JwtHandler>();
 
             #endregion
