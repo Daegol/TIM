@@ -41,7 +41,8 @@ namespace TIM_Server.Services.Mappers
                 StartDate = leave.StartDate,
                 MilitaryRank = leave.Soldier.MilitaryRank,
                 SoldierId = (Guid) leave.SoldierId,
-                LeaveId = leave.Id
+                LeaveId = leave.Id,
+                PhoneNumber = leave.Soldier.PhoneNumber
             };
             return outgoingSoldier;
         }
@@ -53,7 +54,8 @@ namespace TIM_Server.Services.Mappers
                 FirstName = soldier.FirstName,
                 LastName = soldier.LastName,
                 MilitaryRank = soldier.MilitaryRank,
-                SoldierId = soldier.Id
+                SoldierId = soldier.Id,
+                PhoneNumber = soldier.PhoneNumber
             };
             return notOutgoingSoldier;
         }

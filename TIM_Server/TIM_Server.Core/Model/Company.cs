@@ -19,5 +19,9 @@ namespace TIM_Server.Core.Model
 
         private ISet<Report> _reports = new HashSet<Report>();
         public IEnumerable<Report> Reports => _reports;
+
+        private ISet<Equipment> _equipments = new HashSet<Equipment>();
+        public IEnumerable<Equipment> Equipments => _equipments;
+
     }
 }
