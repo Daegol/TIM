@@ -20,7 +20,7 @@ namespace TIM_Server.Application.Controllers
         [HttpGet("soldiers/{soldierOnDutyId}")]
         public async Task<ActionResult<IEnumerable<SoldierToSendDto>>> GetSoldiersToSettlement(Guid soldierOnDutyId)
         {
-            var soldiers = _soldierService.GetSoldiersToSettlement(soldierOnDutyId);
+            var soldiers = await _soldierService.GetSoldiersToSettlement(soldierOnDutyId);
             return Json(soldiers);
         }
     }
