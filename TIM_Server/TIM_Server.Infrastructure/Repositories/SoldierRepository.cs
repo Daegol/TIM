@@ -59,13 +59,17 @@ namespace TIM_Server.Infrastructure.Repositories
 
         public async Task AddCompanyes(IEnumerable<Guid> soldiersId, Guid classId)
         {
-            foreach (var soldierId in soldiersId)
+            var soldiers = await GetAllFromCompany(classId);
+
+            foreach (var soldier in soldiers)
             {
-                var soldier = await GetById(soldierId);
-                soldier.CompanyId = classId;
+                if (soldiersId.Contains(soldier.Id))
+                {
+                    soldier.CompanyId = classId;
+                }
+                else soldier.CompanyId = null;
                 _context.Soldiers.Update(soldier);
             }
-
             await _context.SaveChangesAsync();
             await Task.CompletedTask;
         }

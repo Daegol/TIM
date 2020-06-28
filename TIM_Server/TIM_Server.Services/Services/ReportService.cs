@@ -14,12 +14,14 @@ namespace TIM_Server.Services.Services
         private readonly ISoldierRepository _soldierRepository;
         private readonly IReportRepository _reportRepository;
         private readonly ICommanderRepository _commanderRepository;
+        private readonly ICompanyRepository _companyRepository;
 
-        public ReportService(ISoldierRepository soldierRepository, IReportRepository reportRepository, ICommanderRepository commanderRepository)
+        public ReportService(ISoldierRepository soldierRepository, IReportRepository reportRepository, ICommanderRepository commanderRepository, ICompanyRepository companyRepository)
         {
             _soldierRepository = soldierRepository;
             _reportRepository = reportRepository;
             _commanderRepository = commanderRepository;
+            _companyRepository = companyRepository;
         }
 
         public async Task AddReport(ReportToAddDto reportToAdd)
@@ -43,7 +45,16 @@ namespace TIM_Server.Services.Services
 
         public async Task<IEnumerable<ReportToSendDto>> GetReports(Guid soldierOnDutyId)
         {
-            var companyId = (Guid)_commanderRepository.GetById(soldierOnDutyId).Result.CompanyId;
+            var companyId = Guid.Empty;
+            var companies = await _companyRepository.GetAll();
+            foreach (var company in companies)
+            {
+                if (company.CommanderId == soldierOnDutyId)
+                {
+                    companyId = company.Id;
+                    break;
+                }
+            }
             var reports = await _reportRepository.GetAll(companyId);
             return reports.Select(x => ReportMapper.ReportToSendMap(x, _soldierRepository));
         }

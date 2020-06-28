@@ -41,7 +41,7 @@ namespace TIM_Server.Infrastructure.Repositories
 
         public async Task UpdateCompany(Company company)
         {
-            _context.Companies.Update(company);
+            _context.Update(company);
             await _context.SaveChangesAsync();
             await Task.CompletedTask;
         }
