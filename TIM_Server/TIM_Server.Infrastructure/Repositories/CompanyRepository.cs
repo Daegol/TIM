@@ -33,8 +33,8 @@ namespace TIM_Server.Infrastructure.Repositories
 
         public async Task DeleteCompany(Guid id)
         {
-            var company = await GetById(id);
-            _context.Remove(company);
+            var cl = _context.Companies.Include(x => x.Soldiers).SingleOrDefault(x => x.Id == id);
+            _context.Companies.Remove(cl);
             await _context.SaveChangesAsync();
             await Task.CompletedTask;
         }

@@ -39,8 +39,10 @@ namespace TIM_Server.Services.Mappers
                 FirstName = leave.Soldier.FirstName,
                 LastName = leave.Soldier.LastName,
                 StartDate = leave.StartDate,
+                EndDate = leave.EndDate,
                 MilitaryRank = leave.Soldier.MilitaryRank,
                 SoldierId = (Guid) leave.SoldierId,
+                Status = leave.Soldier.Status,
                 LeaveId = leave.Id,
                 PhoneNumber = leave.Soldier.PhoneNumber
             };

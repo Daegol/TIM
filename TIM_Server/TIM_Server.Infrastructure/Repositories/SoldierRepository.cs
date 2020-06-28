@@ -56,5 +56,19 @@ namespace TIM_Server.Infrastructure.Repositories
             await _context.SaveChangesAsync();
             await Task.CompletedTask;
         }
+
+        public async Task AddCompanyes(IEnumerable<Guid> soldiersId, Guid classId)
+        {
+            foreach (var soldierId in soldiersId)
+            {
+                var soldier = await GetById(soldierId);
+                soldier.CompanyId = classId;
+                _context.Soldiers.Update(soldier);
+            }
+
+            await _context.SaveChangesAsync();
+            await Task.CompletedTask;
+        }
+
     }
 }

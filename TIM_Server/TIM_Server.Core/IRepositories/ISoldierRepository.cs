@@ -16,5 +16,6 @@ namespace TIM_Server.Core.IRepositories
         Task AddSoldier(Soldier soldier);
         Task DeleteSoldier(string pesel);
         Task UpdateSoldier(Soldier soldier);
+        Task AddCompanyes(IEnumerable<Guid> soldiersId, Guid classId);
     }
 }
